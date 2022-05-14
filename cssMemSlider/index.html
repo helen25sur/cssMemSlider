@@ -8,7 +8,7 @@
   <title>CSSMemSlider</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -18,21 +18,45 @@
     <div class="container">
       <h1 class="main-title">CSS Mem Slider</h1>
       <div class="slider-wrapper">
+        <input class="control-input" type="radio" name="forSliderControl" id="firstInput">
+        <input class="control-input" type="radio" name="forSliderControl" id="secondInput">
+        <input class="control-input" type="radio" name="forSliderControl" id="thirdInput">
+        <input class="control-input" type="radio" name="forSliderControl" id="forthInput">
+        <div class="controls-wrapper">
+          <ul class="controls">
+            <li class="control-item">
+              <label class="control-label" for="firstInput">
+              </label>
+            </li>
+            <li class="control-item">
+              <label class="control-label" for="secondInput">
+              </label>
+            </li>
+            <li class="control-item">
+              <label class="control-label" for="thirdInput">
+              </label>
+            </li>
+            <li class="control-item">
+              <label class="control-label" for="forthInput">
+              </label>
+            </li>
+          </ul>
+        </div>
         <div class="image-wrapper">
           <ul class="slider">
             <li class="slider-item">
               <img src="./images/01.jpeg" alt="" class="slider-image">
             </li>
-            <li hidden class="slider-item">
+            <li hidden class="slider-item" data-num="2">
               <img src="./images/02.jpeg" alt="" class="slider-image">
             </li>
-            <li hidden class="slider-item">
+            <li hidden class="slider-item" data-num="3">
               <img src="./images/03.jpeg" alt="" class="slider-image">
             </li>
             <li hidden class="slider-item">
               <img src="./images/04.jpg" alt="" class="slider-image">
             </li>
-            <li hidden class="slider-item">
+            <li hidden class="slider-item" data-num="4">
               <img src="./images/05.jpg" alt="" class="slider-image">
             </li>
             <li hidden class="slider-item">
@@ -53,20 +77,20 @@
           </ul>
         </div>
         <div class="captions-wrapper">
-          <ul class="caaptions">
+          <ul class="captions">
             <li class="caption-item">
               <span class="caption-text">Тыжпрограммист</span>
             </li>
-            <li hidden class="caption-item">
+            <li hidden class="caption-item" data-num="2">
               <span class="caption-text">Ну почини компуктер, жалко что-ли?</span>
             </li>
-            <li hidden class="caption-item">
+            <li data-num="3" hidden class="caption-item">
               <span class="caption-text">Не нужно, не упоминай! Никогда!</span>
             </li>
             <li hidden class="caption-item">
               <span class="caption-text">Да назови ее просто "i"</span>
             </li>
-            <li hidden class="caption-item">
+            <li hidden class="caption-item" data-num="4">
               <span class="caption-text">Фулстек-извращенец</span>
             </li>
             <li hidden class="caption-item">
@@ -86,26 +110,7 @@
             </li>
           </ul>
         </div>
-        <div class="controls-wrapper">
-          <ul class="controls">
-            <li class="control-item">
-              <!-- <button class="control-btn"></button> -->
-              <input type="radio" name="" id="">
-            </li>
-            <li class="control-item">
-              <!-- <button class="control-btn"></button> -->
-              <input type="radio" name="" id="">
-            </li>
-            <li class="control-item">
-              <!-- <button class="control-btn"></button> -->
-              <input type="radio" name="" id="">
-            </li>
-            <li class="control-item">
-              <!-- <button class="control-btn"></button> -->
-              <input type="radio" name="" id="">
-            </li>
-          </ul>
-        </div>
+
       </div>
 
     </div>
