@@ -53,22 +53,42 @@ ul {
 }
 
 .control-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+.control-label>span {
+  display: block;
   width: 1.2em;
   height: 1.2em;
   border-radius: 50%;
   background-color: #fff;
   border: 0.2em solid #b1ffa3;
+  transition: all 0.5s;
 }
 
-#firstInput:checked~.controls-wrapper .control-label[for="firstInput"],
-#secondInput:checked~.controls-wrapper .control-label[for="secondInput"],
-#thirdInput:checked~.controls-wrapper .control-label[for="thirdInput"],
-#forthInput:checked~.controls-wrapper .control-label[for="forthInput"],
-#fifthInput:checked~.controls-wrapper .control-label[for="fifthInput"],
-#sixthInput:checked~.controls-wrapper .control-label[for="sixthInput"],
-#seventhInput:checked~.controls-wrapper .control-label[for="seventhInput"],
-#eighthInput:checked~.controls-wrapper .control-label[for="eighthInput"] {
+.control-label:hover span {
+  background-color: #26ff26;
+  border-color: #fff;
+}
+
+.control-label:active span {
+  background-color: #26ff26;
+  border-color: #127401;
+}
+
+#firstInput:checked~.controls-wrapper .control-label[for="firstInput"]>span,
+#secondInput:checked~.controls-wrapper .control-label[for="secondInput"]>span,
+#thirdInput:checked~.controls-wrapper .control-label[for="thirdInput"]>span,
+#forthInput:checked~.controls-wrapper .control-label[for="forthInput"]>span,
+#fifthInput:checked~.controls-wrapper .control-label[for="fifthInput"]>span,
+#sixthInput:checked~.controls-wrapper .control-label[for="sixthInput"]>span,
+#seventhInput:checked~.controls-wrapper .control-label[for="seventhInput"]>span,
+#eighthInput:checked~.controls-wrapper .control-label[for="eighthInput"]>span {
   background-color: #127401;
 }
 
@@ -108,7 +128,7 @@ ul {
 #eighthInput:checked~.image-wrapper .slider-item[data-num="8"],
 #eighthInput:checked~.captions-wrapper .caption-item[data-num="8"] {
   display: block;
-  animation: forSlider 1s ease-in-out 1 backwards;
+  animation: forSlider 1.2s ease-in-out 1 backwards;
 }
 
 @keyframes forSlider {
