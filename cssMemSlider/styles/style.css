@@ -127,7 +127,7 @@ ul {
 #seventhInput:checked~.captions-wrapper .caption-item[data-num="7"],
 #eighthInput:checked~.image-wrapper .slider-item[data-num="8"],
 #eighthInput:checked~.captions-wrapper .caption-item[data-num="8"] {
-  display: block;
+  display: flex;
   animation: forSlider 1.2s ease-in-out 1 backwards;
 }
 
@@ -149,6 +149,14 @@ ul {
 
 .slider {
   font-size: 0;
+  height: 100%;
+}
+
+.slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .slider-image {
@@ -167,8 +175,38 @@ ul {
   color: #b1ffa3;
 }
 
+@media (max-width: 768px) {
 
+  .container {
+    max-width: 85vw;
+  }
 
-@media screen and (max-width: 1200px) {}
+  .slider-wrapper {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-@media (max-width: 768px) {}
+  .image-wrapper {
+    order: 0;
+    height: 55vh;
+  }
+
+  .controls-wrapper {
+    order: 1;
+    width: 100%;
+  }
+
+  .controls {
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .captions-wrapper {
+    margin-top: 2em;
+    order: 2;
+    width: 100%;
+  }
+}
