@@ -39,12 +39,13 @@ ul {
 
 .controls-wrapper {
   order: 2;
+  width: 40%;
 }
 
 .controls {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 7em;
 }
 
 .control-input {
@@ -63,26 +64,61 @@ ul {
 #firstInput:checked~.controls-wrapper .control-label[for="firstInput"],
 #secondInput:checked~.controls-wrapper .control-label[for="secondInput"],
 #thirdInput:checked~.controls-wrapper .control-label[for="thirdInput"],
-#forthInput:checked~.controls-wrapper .control-label[for="forthInput"] {
+#forthInput:checked~.controls-wrapper .control-label[for="forthInput"],
+#fifthInput:checked~.controls-wrapper .control-label[for="fifthInput"],
+#sixthInput:checked~.controls-wrapper .control-label[for="sixthInput"],
+#seventhInput:checked~.controls-wrapper .control-label[for="seventhInput"],
+#eighthInput:checked~.controls-wrapper .control-label[for="eighthInput"] {
   background-color: #127401;
 }
 
+#firstInput:checked~.image-wrapper .slider-item,
+#firstInput:checked~.captions-wrapper .caption-item,
 #secondInput:checked~.image-wrapper .slider-item,
 #secondInput:checked~.captions-wrapper .caption-item,
 #thirdInput:checked~.image-wrapper .slider-item,
 #thirdInput:checked~.captions-wrapper .caption-item,
 #forthInput:checked~.image-wrapper .slider-item,
-#forthInput:checked~.captions-wrapper .caption-item {
+#forthInput:checked~.captions-wrapper .caption-item,
+#fifthInput:checked~.image-wrapper .slider-item,
+#fifthInput:checked~.captions-wrapper .caption-item,
+#sixthInput:checked~.image-wrapper .slider-item,
+#sixthInput:checked~.captions-wrapper .caption-item,
+#seventhInput:checked~.image-wrapper .slider-item,
+#seventhInput:checked~.captions-wrapper .caption-item,
+#eighthInput:checked~.image-wrapper .slider-item,
+#eighthInput:checked~.captions-wrapper .caption-item {
   display: none;
 }
 
+#firstInput:checked~.image-wrapper .slider-item[data-num="1"],
+#firstInput:checked~.captions-wrapper .caption-item[data-num="1"],
 #secondInput:checked~.image-wrapper .slider-item[data-num="2"],
 #secondInput:checked~.captions-wrapper .caption-item[data-num="2"],
 #thirdInput:checked~.image-wrapper .slider-item[data-num="3"],
 #thirdInput:checked~.captions-wrapper .caption-item[data-num="3"],
 #forthInput:checked~.image-wrapper .slider-item[data-num="4"],
-#forthInput:checked~.captions-wrapper .caption-item[data-num="4"] {
+#forthInput:checked~.captions-wrapper .caption-item[data-num="4"],
+#fifthInput:checked~.image-wrapper .slider-item[data-num="5"],
+#fifthInput:checked~.captions-wrapper .caption-item[data-num="5"],
+#sixthInput:checked~.image-wrapper .slider-item[data-num="6"],
+#sixthInput:checked~.captions-wrapper .caption-item[data-num="6"],
+#seventhInput:checked~.image-wrapper .slider-item[data-num="7"],
+#seventhInput:checked~.captions-wrapper .caption-item[data-num="7"],
+#eighthInput:checked~.image-wrapper .slider-item[data-num="8"],
+#eighthInput:checked~.captions-wrapper .caption-item[data-num="8"] {
   display: block;
+  animation: forSlider 1s ease-in-out 1 backwards;
+}
+
+@keyframes forSlider {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .image-wrapper {
@@ -100,6 +136,10 @@ ul {
   width: 100%;
   border-radius: 5%;
   box-shadow: 7px 7px 12px;
+}
+
+.captions-wrapper {
+  width: 60%;
 }
 
 .caption-text {
